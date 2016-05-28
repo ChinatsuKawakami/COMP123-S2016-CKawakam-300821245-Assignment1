@@ -15,6 +15,30 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
      */
     class Hero
     {
-       
+        //PRIVATE INSTANCE VARIABLES++++++++++++++++++++++++++++++++++++++++
+        private int _strength;
+        private int _speed;
+        private int _health;
+        private string _name;
+
+        //PUBLIC INSTANCE VARIABLES+++++++++++++++++++++++++++++++++++++++++
+
+        /**
+         * <summary>
+         * This is a propety for our _name field
+         * </summary>
+         * @property{string} Name
+         */
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }//close get
+            set
+            {
+                _name = value;
+            }//close set
+        }//close public Name
     }
 }
