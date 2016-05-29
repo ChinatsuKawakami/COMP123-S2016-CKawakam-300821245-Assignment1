@@ -10,7 +10,7 @@ using System.Threading.Tasks;
  *Date Modified: 
  *Student Id: 300821245
  *Description:
- *version : 0.0.2 - Added private instance variables and public propety
+ *version : 0.0.4 - Added constructor 
  */
 
 namespace COMP123_S2016_Ckawakam_300821245_Assignment1

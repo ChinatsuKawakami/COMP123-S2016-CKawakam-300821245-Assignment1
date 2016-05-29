@@ -40,5 +40,24 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
                 _name = value;
             }//close set
         }//close public Name
+
+
+        //CONSTRUCTOR+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+       
+        /**
+         * <summary>
+         * This is constructor that takes name as a parameter and passes
+         * it to the _name private instance variable
+         * it to the _generateAbilities method
+         * </summary>
+         * @constructor Hero
+         * @param {string} name
+         */
+        public Hero(string name)
+        {
+            this._name = name;
+            this._generateAbilities();
+        }
+
     }
 }
