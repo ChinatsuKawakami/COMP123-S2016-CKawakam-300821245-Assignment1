@@ -59,5 +59,95 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             this._generateAbilities();
         }
 
+        /**
+         * <summary>
+         * This method to get values for _strength , _speed, _health randamly
+         * </summary>
+         * @method _generateAbilities
+         * @return {void}
+         */
+        private void _generateAbilities()
+        {
+            Random ram = new Random();
+
+
+            this._strength = ram.Next(1, 100);
+            this._speed = ram.Next(1, 100);
+            this._health = ram.Next(1, 100);
+        }
+        /**
+       * <summary>
+       * This method to check whether Hero object get damage or not by returning bool value
+       * </summary>
+       * @method _hitAttempt
+       * @return {bool}_hitA
+       */
+        private bool _hitAttempt()
+        {
+            bool hitA;
+
+            Random ram = new Random();
+            int getAttack = ram.Next(0, 2);
+            if (getAttack == 0)
+            {
+                //??this shold be only 20% of the time
+
+                hitA = true;
+
+            }
+            else
+            {
+                hitA = false;
+            }
+
+
+            return hitA;
+
+        }
+
+        /**
+       * <summary>
+       * This method to calculate how much damage the Hero object gets 
+       * </summary>
+       * @method _hitDamage
+       * @return {int} damage
+       */
+        private int _hitDamage()
+        {
+            Random ram = new Random();
+
+            int damage = _strength * ram.Next(1, 6);
+            return damage;
+        }
+        /**
+     * <summary>
+     * This method to display how much damage the Hero object gets to console
+     * </summary>
+     * @method Fight
+     * @return {void} 
+     */
+        public void Fight()
+        {
+            _hitAttempt();
+            if (_hitAttempt() == true)
+            {
+                _hitDamage();
+
+                Console.WriteLine("You damaged {0}", _hitDamage());
+            }
+
+        }
+        /**
+     * <summary>
+     * This method to display the Hero object's parameter(_name,_strength,_speed,_health)
+     * </summary>
+     * @method Show
+     * @return {void} 
+     */
+        public void Show()
+        {
+            Console.WriteLine("\n{0} strength:{1}\nYour speed:{2},\nYour health:{3}", this._name, this._strength, this._speed, this._health);
+        }
+
     }
 }
