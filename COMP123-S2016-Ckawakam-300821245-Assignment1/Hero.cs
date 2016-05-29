@@ -13,7 +13,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
      * @param 
      * @field _strength{int},_speed{int},_health{int},_name{string},Name{string}
      */
-    class Hero
+    public class Hero
     {
         //PRIVATE INSTANCE VARIABLES++++++++++++++++++++++++++++++++++++++++
         private int _strength;
@@ -133,7 +133,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             {
                 _hitDamage();
 
-                Console.WriteLine("You damaged {0}", _hitDamage());
+                Console.WriteLine("!!You damaged {0}!!", _hitDamage());
             }
 
         }

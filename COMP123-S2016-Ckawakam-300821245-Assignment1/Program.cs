@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  *Student Id: 300821245
  *Description: This program calls instance variables from Hero class
  *and print Fight and Show method.
- *version : 0.0.5- Added methods(_generateAbilities,_hitAttempt,_hitDamage,Fight,and Show)
+ *version : 0.0.6- Added UnitTest for checking methods
  */
 
 namespace COMP123_S2016_Ckawakam_300821245_Assignment1
@@ -21,7 +21,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
      * 
      * @class Program
      */
-    class Program
+   public class Program
     {
         /**
          * The Main method for our driver class program
@@ -31,7 +31,11 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
          */
         static void Main(string[] args)
         {
-           
+            Hero hero1 = new Hero("Mike");
+            //call Show method
+            hero1.Show();
+
+            hero1.Fight();
 
 
         }

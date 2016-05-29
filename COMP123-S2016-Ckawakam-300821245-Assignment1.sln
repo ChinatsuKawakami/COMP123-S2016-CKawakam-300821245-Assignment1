@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP123-S2016-Ckawakam-300821245-Assignment1", "COMP123-S2016-Ckawakam-300821245-Assignment1\COMP123-S2016-Ckawakam-300821245-Assignment1.csproj", "{683A2DA6-1942-41CD-ABE0-C6FA18208351}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestFor_generateAbilities", "UnitTestFor_generateAbilities\UnitTestFor_generateAbilities.csproj", "{9D4AE595-540A-4394-958E-599C98A1DBB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{683A2DA6-1942-41CD-ABE0-C6FA18208351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{683A2DA6-1942-41CD-ABE0-C6FA18208351}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{683A2DA6-1942-41CD-ABE0-C6FA18208351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4AE595-540A-4394-958E-599C98A1DBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4AE595-540A-4394-958E-599C98A1DBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4AE595-540A-4394-958E-599C98A1DBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4AE595-540A-4394-958E-599C98A1DBB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
