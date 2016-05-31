@@ -55,6 +55,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
          */
         public Hero(string name)
         {
+            //??name will be passed to the private name instance variables??
             this._name = name;
             this._generateAbilities();
         }
@@ -71,9 +72,9 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             Random ram = new Random();
 
 
-            this._strength = ram.Next(1, 100);
-            this._speed = ram.Next(1, 100);
-            this._health = ram.Next(1, 100);
+            this._strength = ram.Next(1, 101); //between 1-100
+            this._speed = ram.Next(1, 101);
+            this._health = ram.Next(1, 101);
         }
         /**
        * <summary>
@@ -87,7 +88,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             bool hitA;
 
             Random ram = new Random();
-            int getAttack = ram.Next(0, 2);
+            int getAttack = ram.Next(0,5);// 1/5 ---between 0 - 4
             if (getAttack == 0)
             {
                 //??this shold be only 20% of the time
@@ -116,7 +117,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
         {
             Random ram = new Random();
 
-            int damage = _strength * ram.Next(1, 6);
+            int damage = _strength * ram.Next(1, 7);//between 1 - 6
             return damage;
         }
         /**
@@ -128,12 +129,12 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
      */
         public void Fight()
         {
-            _hitAttempt();
+            //_hitAttempt();
             if (_hitAttempt() == true)
             {
-                _hitDamage();
+                //_hitDamage();
 
-                Console.WriteLine("!!You damaged {0}!!", _hitDamage());
+                Console.WriteLine("!!{0} damaged {1}!!",this.Name, _hitDamage());
             }
 
         }
@@ -146,7 +147,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
      */
         public void Show()
         {
-            Console.WriteLine("\n{0} strength:{1}\nYour speed:{2},\nYour health:{3}", this._name, this._strength, this._speed, this._health);
+            Console.WriteLine("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
         }
 
     }

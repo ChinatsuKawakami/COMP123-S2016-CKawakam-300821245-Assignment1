@@ -7,6 +7,7 @@ namespace UnitTestFor_generateAbilities
     [TestClass]
     public class UnitTest1
     {
+        /*
         [TestMethod]
         public void _generateAbilitiesTestMethod()
         {
@@ -20,7 +21,67 @@ namespace UnitTestFor_generateAbilities
             //Assert
             Assert.IsNotNull(result);
         }
+        [TestMethod]
+        public void _hitAttemptTestMethod()
+        {
+            //Arrange
+            bool checkAttempt;
 
       
+
+            //Act
+          
+
+            //Assert
+           
+        }
+     
+
+             [TestMethod]
+        private int _hitDamageTestMethod()
+        {
+            //Arrange
+         
+
+      
+
+            //Act
+          
+
+            //Assert
+           
+        }
+       [TestMethod]
+        public void FightTestMethod()
+        {
+            //Arrange
+         
+
+      
+
+            //Act
+          
+
+            //Assert
+           
+        }
+         */
+        [TestMethod]
+        public void ShowTestMethod()
+        {
+            //Arrange
+            
+
+      
+
+            //Act
+          
+
+            //Assert
+           
+        }
+         
+
+
     }
 }
