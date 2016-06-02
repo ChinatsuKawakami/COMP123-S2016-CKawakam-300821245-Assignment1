@@ -21,6 +21,24 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
         private int _health;
         private string _name;
 
+
+        //Set Property for UnitTest+++++++++++++++++++++++++++++++++++++++
+        public int Strength
+        {
+            get { return _strength; }
+            set { _strength = value; }
+        }
+        public int Speed
+        {
+            get { return _speed; }
+            set { _speed = value; }
+        }
+        public int Health
+        {
+            get { return _health; }
+            set { _health = value; }
+        }
+
         //PUBLIC INSTANCE VARIABLES+++++++++++++++++++++++++++++++++++++++++
 
         /**
@@ -40,6 +58,10 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
                 _name = value;
             }//close set
         }//close public Name
+
+        //property for Test
+
+
 
 
         //CONSTRUCTOR+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -67,7 +89,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
          * @method _generateAbilities
          * @return {void}
          */
-        private void _generateAbilities()
+        public void _generateAbilities()
         {
             Random ram = new Random();
 
@@ -76,6 +98,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             this._speed = ram.Next(1, 101);
             this._health = ram.Next(1, 101);
         }
+        
         /**
        * <summary>
        * This method to check whether Hero object get damage or not by returning bool value
@@ -88,7 +111,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             bool hitA;
 
             Random ram = new Random();
-            int getAttack = ram.Next(0,5);// 1/5 ---between 0 - 4
+            int getAttack = ram.Next(0,5);// possibility to hero character get damage is 1/5 ---between 0 - 4
             if (getAttack == 0)
             {
                 //??this shold be only 20% of the time
@@ -115,9 +138,9 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
        */
         private int _hitDamage()
         {
-            Random ram = new Random();
-
-            int damage = _strength * ram.Next(1, 7);//between 1 - 6
+            Random damageram = new Random();
+           
+            int damage = _strength * damageram.Next(1, 7);//between 1 - 6
             return damage;
         }
         /**
@@ -134,7 +157,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             {
                 //_hitDamage();
 
-                Console.WriteLine("!!{0} damaged {1}!!",this.Name, _hitDamage());
+                Console.WriteLine("!!{0} damaged {1}!!",this._name, _hitDamage());
             }
 
         }
@@ -150,5 +173,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             Console.WriteLine("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
         }
 
+
+    
     }
 }
