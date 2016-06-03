@@ -65,7 +65,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
 
 
         //CONSTRUCTOR+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-       
+
         /**
          * <summary>
          * This is constructor that takes name as a parameter and passes
@@ -98,7 +98,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             this._speed = ram.Next(1, 101);
             this._health = ram.Next(1, 101);
         }
-        
+
         /**
        * <summary>
        * This method to check whether Hero object get damage or not by returning bool value
@@ -111,7 +111,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             bool hitA;
 
             Random ram = new Random();
-            int getAttack = ram.Next(0,5);// possibility to hero character get damage is 1/5 ---between 0 - 4
+            int getAttack = ram.Next(0, 5);// possibility to hero character get damage is 1/5 ---between 0 - 4
             if (getAttack == 0)
             {
                 //??this shold be only 20% of the time
@@ -139,11 +139,11 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
         private int _hitDamage()
         {
             Random damageram = new Random();
-           
+
             int damage = _strength * damageram.Next(1, 7);//between 1 - 6
             return damage;
         }
-        /**
+    /**
      * <summary>
      * This method to display how much damage the Hero object gets to console
      * </summary>
@@ -157,25 +157,58 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             {
                 //_hitDamage();
 
-                Console.WriteLine("!!{0} damaged {1}!!",this._name, _hitDamage());
+                Console.WriteLine("!!{0} damaged {1}!!", this._name, _hitDamage());
             }
 
         }
-    /**
-     * <summary>
-     * This method to display the Hero object's parameter(_name,_strength,_speed,_health)
-     * </summary>
-     * @method Show
-     * @return {void} 
-     */
+    
+
+
+        /**
+         * <summary>
+         * This method to display the Hero object's parameter(_name,_strength,_speed,_health)
+         * </summary>
+         * @method Show
+         * @return {void} 
+         */
         public void Show()
         {
             Console.WriteLine("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
         }
 
 
-        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-       /**
+  //They are method for UnitTest!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    /**
+     * <summary>
+     * This method to calculate how much damage the Hero object gets 
+     * </summary>
+     * @method _hitDamageTest
+     * @return {int} damage
+     */
+        public int _hitDamageTest()
+        {
+           // Random damageram = new Random();
+
+          //  int damage = _strength * damageram.Next(1, 7);//between 1 - 6
+            return _hitDamage();
+        }
+        
+    /**
+    * <summary>
+    * This method to Test for checking whether Fight method works or not in UnitTest1
+    * </summary>
+    * @method FightTest
+    * @return {string} 
+    */
+        public string FightTest()
+        {
+
+            return string.Format("!!{0} damaged {1}!!", this._name, _hitDamage());
+
+        }
+        
+        
+        /**
         * <summary>
         *This method to Test to check whether Show method works or not in UnitTest
         * <summary>

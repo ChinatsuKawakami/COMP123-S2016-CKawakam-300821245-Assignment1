@@ -71,24 +71,24 @@ namespace UnitTestFor_generateAbilities
             Assert.IsTrue(expected, message);//Pass!
 
 
-        }//_hitDamageTestMethod()
+        }//close_hitDamageTestMethod()
 
-       /* [TestMethod]
+        [TestMethod]
         public void FightTestMethod()
         {
             //Arrange
             Hero hero4 = new Hero("Mary");
-
+            hero4.Strength = 20;
+            hero4.Speed = 30;
+            hero4.Health = 40;
             //Act
-
-            hero4.Fight();
-             
+             string str = string.Format("!!{0} damaged {1}!!", hero4.Name,hero4._hitDamageTest());
             //Assert
-                         
+             Assert.AreEqual(str, hero4.FightTest());        
             
 
-        }//FightTestMethod()
-        */
+        }//closeFightTestMethod()
+        
         [TestMethod]
         public void ShowTestMethod()
         {
@@ -106,7 +106,7 @@ namespace UnitTestFor_generateAbilities
             //Assert
             Assert.AreEqual(str,hero1.ToString());//pass!!
             Assert.AreEqual(check, hero1.ToString());//pass!!
-        }//ShowTestMethod()
+        }//closeShowTestMethod()
 
     }//UnitTest
 }//namespace
