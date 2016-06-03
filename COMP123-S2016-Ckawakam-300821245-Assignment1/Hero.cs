@@ -89,7 +89,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
          * @method _generateAbilities
          * @return {void}
          */
-        public void _generateAbilities()
+        private void _generateAbilities()
         {
             Random ram = new Random();
 

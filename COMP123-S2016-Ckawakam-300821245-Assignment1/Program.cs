@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  *Student Id: 300821245
  *Description: This program calls instance variables from Hero class
  *and print Fight and Show method.
- *version : 0.0.8- updated Hero's class(added public property for the UnitTest) and UnitTest for _generateAbilitiesTestMethod()
+ *version : 0.0.9- added UnitTest for _hitDamageTestMethod()
  */
 
 namespace COMP123_S2016_Ckawakam_300821245_Assignment1

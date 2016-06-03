@@ -32,7 +32,63 @@ namespace UnitTestFor_generateAbilities
         }//_generateAbilitiesTestMethod()
 
 
-      
+        /*[TestMethod]
+        public void _hitAttemptTestMethod()
+        {
+
+            //Arrange
+            Hero hero2 = new Hero("Jake");
+            Program.
+            bool hitCheck = 
+
+            //Act
+
+            
+            //Assert
+
+            
+
+
+        }//_hitAttemptTestMethod
+         */
+        [TestMethod]
+        public void  _hitDamageTestMethod()
+        {
+            //Arrange
+            Hero hero3 = new Hero("Tom");
+            Random ram = new Random();
+            hero3.Strength = 10;// initialize hero3.Strength =10 for the test
+            int damage = hero3.Strength * ram.Next(1, 7);
+            
+            
+            //Act
+           
+            bool expected = damage == 10 || damage == 20 || damage == 30 || damage == 40 || damage == 50 || damage == 60;
+            string message = "message";
+           
+            //Assert
+
+            Assert.IsTrue(expected, message);//Pass!
+
+
+        }//_hitDamageTestMethod()
+
+       /* [TestMethod]
+        public void FightTestMethod()
+        {
+            //Arrange
+            Hero hero4 = new Hero("Mary");
+
+            //Act
+
+            hero4.Fight();
+             
+            //Assert
+                         
+            
+
+        }//FightTestMethod()
+        */
     }//UnitTest
 }//namespace
 
