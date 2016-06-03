@@ -89,6 +89,25 @@ namespace UnitTestFor_generateAbilities
 
         }//FightTestMethod()
         */
+        [TestMethod]
+        public void ShowTestMethod()
+        {
+            //Arrange
+            
+            Hero hero1 = new Hero("Mike");
+            hero1.Strength = 10;
+            hero1.Speed = 15;
+            hero1.Health = 20;
+            
+            //Act
+          
+            string str = String.Format("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", "Mike", 10,15, 20);
+            string check = String.Format("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", hero1.Name,hero1.Strength, hero1.Speed, hero1.Health);
+            //Assert
+            Assert.AreEqual(str,hero1.ToString());//pass!!
+            Assert.AreEqual(check, hero1.ToString());//pass!!
+        }//ShowTestMethod()
+
     }//UnitTest
 }//namespace
 

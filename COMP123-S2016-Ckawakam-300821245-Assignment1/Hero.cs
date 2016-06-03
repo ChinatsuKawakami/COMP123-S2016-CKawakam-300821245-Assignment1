@@ -161,7 +161,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             }
 
         }
-        /**
+    /**
      * <summary>
      * This method to display the Hero object's parameter(_name,_strength,_speed,_health)
      * </summary>
@@ -174,6 +174,17 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
         }
 
 
-    
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+       /**
+        * <summary>
+        *This method to Test to check whether Show method works or not in UnitTest
+        * <summary>
+        * @method ToString()
+        * @return {string}
+        */
+        public override string ToString()
+        {
+            return String.Format("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
+        }
     }
 }
