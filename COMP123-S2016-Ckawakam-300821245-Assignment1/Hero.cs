@@ -173,23 +173,52 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
          */
         public void Show()
         {
-            Console.WriteLine("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
+            Console.WriteLine("\n{0} strength:{1}\n{0} speed:{2}\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
         }
 
 
-  //They are method for UnitTest!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //THEY AER METHODS FOR UNIT TEST!!!!+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        /**
+          * <summary>
+          * This method to check whether Hero object get damage or not by returning bool value
+          * </summary>
+          * @method HitAttemptTest(int)
+          * 
+          * @return {bool}
+          */
+        public bool HitAttemptTest(int getAttack)
+        {
+
+            bool hitB;
+            
+         //  Random ram = new Random();
+         // int getAttack = ram.Next(0, 5);// possibility to hero character get damage is 1/5 ---between 0 - 4
+            if (getAttack == 0)
+            {
+                //??this shold be only 20% of the time
+
+                hitB = true;
+
+            }
+            else
+            {
+                hitB = false;
+            }
+           
+
+            return hitB;
+        }
+        
     /**
      * <summary>
-     * This method to calculate how much damage the Hero object gets 
+     * This method to check whether _hitDamage method works or not
      * </summary>
-     * @method _hitDamageTest
-     * @return {int} damage
+     * @method HitDamageTest
+     * @return {int} _hitDamage()
      */
-        public int _hitDamageTest()
+        public int HitDamageTest()
         {
-           // Random damageram = new Random();
-
-          //  int damage = _strength * damageram.Next(1, 7);//between 1 - 6
+      
             return _hitDamage();
         }
         
@@ -217,7 +246,7 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
         */
         public override string ToString()
         {
-            return String.Format("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
+            return String.Format("\n{0} strength:{1}\n{0} speed:{2}\n{0} health:{3}", this._name, this._strength, this._speed, this._health);
         }
     }
 }

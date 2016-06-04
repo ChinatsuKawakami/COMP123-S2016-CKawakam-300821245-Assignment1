@@ -32,25 +32,46 @@ namespace UnitTestFor_generateAbilities
         }//_generateAbilitiesTestMethod()
 
 
-        /*[TestMethod]
+        [TestMethod]
         public void _hitAttemptTestMethod()
         {
 
             //Arrange
             Hero hero2 = new Hero("Jake");
-            Program.
-            bool hitCheck = 
+            Random ram = new Random();
+            int getAttack = ram.Next(0, 5);
+            //Act 
+            bool checkRam = getAttack >= 0 && getAttack < 5;
+            string message = "message";
+            //Assert 
+            Assert.IsTrue(checkRam, message);//Pass! getAttack has 5 numbers and they are 0, 1, 2, 3, 4
 
-            //Act
+            //Arrange
+            bool actual;
+             //Act  
+             if (getAttack == 0)
+             {
+              //Assert
+               actual=true;
+               
+            Assert.AreEqual(actual, hero2.HitAttemptTest(0));//Pass!!
+            //Assert.AreEqual(actual, hero2.HitAttemptTest(2));//Failed because actual = true but hero2.HitAttemptTest = false
 
-            
-            //Assert
+             }else if(getAttack ==1 || getAttack==2|| getAttack == 3|| getAttack ==4)
+             {
+                 //Assert
+                actual= false;
+               // Assert.AreEqual(actual, hero2.HitAttemptTest(0));//Fail because actual = false but hero2.HitAttemptTest = True
+              Assert.AreEqual(actual, hero2.HitAttemptTest(1));//Pass!
+              Assert.AreEqual(actual, hero2.HitAttemptTest(2));//Pass!
+              Assert.AreEqual(actual, hero2.HitAttemptTest(3));//Pass!
+              Assert.AreEqual(actual, hero2.HitAttemptTest(4));//Pass!
+            }
 
-            
-
-
+           
+          
         }//_hitAttemptTestMethod
-         */
+      
         [TestMethod]
         public void  _hitDamageTestMethod()
         {
@@ -65,11 +86,11 @@ namespace UnitTestFor_generateAbilities
            
             bool expected = damage == 10 || damage == 20 || damage == 30 || damage == 40 || damage == 50 || damage == 60;
             string message = "message";
-           
+            bool mayFail = damage == 5 || damage == 13 || damage == 22 || damage == 35 || damage == 41 || damage == 55 || damage == 59;
             //Assert
 
-            Assert.IsTrue(expected, message);//Pass!
-
+           Assert.IsTrue(expected, message);//Pass!
+        // Assert.IsTrue(mayFail, message);//Failed
 
         }//close_hitDamageTestMethod()
 
@@ -82,10 +103,11 @@ namespace UnitTestFor_generateAbilities
             hero4.Speed = 30;
             hero4.Health = 40;
             //Act
-             string str = string.Format("!!{0} damaged {1}!!", hero4.Name,hero4._hitDamageTest());
+             string str = string.Format("!!{0} damaged {1}!!", hero4.Name,hero4.HitDamageTest());// _hitDamageTest method includes _hitDamage() metod
+             string expectedFail = string.Format("!!{0} get damaged {1}!!", hero4.Name, hero4.HitDamageTest());
             //Assert
-             Assert.AreEqual(str, hero4.FightTest());        
-            
+            Assert.AreEqual(str, hero4.FightTest()); //pass!  
+        // Assert.AreEqual(expectedFail,hero4.FightTest()); //Failed
 
         }//closeFightTestMethod()
         
@@ -101,11 +123,13 @@ namespace UnitTestFor_generateAbilities
             
             //Act
           
-            string str = String.Format("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", "Mike", 10,15, 20);
-            string check = String.Format("\n{0} strength:{1}\n{0} speed:{2},\n{0} health:{3}", hero1.Name,hero1.Strength, hero1.Speed, hero1.Health);
+            string str = String.Format("\n{0} strength:{1}\n{0} speed:{2}\n{0} health:{3}", "Mike", 10,15, 20);
+            string check = String.Format("\n{0} strength:{1}\n{0} speed:{2}\n{0} health:{3}", hero1.Name,hero1.Strength, hero1.Speed, hero1.Health);
+            string failed = string.Format("\n{0} is strength:{1}\n{0} is speed:{2}\n{0} is health:{3}", "Mike", 10, 15, 20);
             //Assert
-            Assert.AreEqual(str,hero1.ToString());//pass!!
-            Assert.AreEqual(check, hero1.ToString());//pass!!
+           Assert.AreEqual(str,hero1.ToString());//pass!!
+           Assert.AreEqual(check, hero1.ToString());//pass!!
+           // Assert.AreEqual(failed, hero1.ToString());//Failed
         }//closeShowTestMethod()
 
     }//UnitTest
