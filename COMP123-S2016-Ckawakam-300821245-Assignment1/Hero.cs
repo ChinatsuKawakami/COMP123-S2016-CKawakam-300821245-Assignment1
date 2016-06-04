@@ -22,24 +22,8 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
         private string _name;
 
 
-        //Set Property for UnitTest+++++++++++++++++++++++++++++++++++++++
-        public int Strength
-        {
-            get { return _strength; }
-            set { _strength = value; }
-        }
-        public int Speed
-        {
-            get { return _speed; }
-            set { _speed = value; }
-        }
-        public int Health
-        {
-            get { return _health; }
-            set { _health = value; }
-        }
-
-        //PUBLIC INSTANCE VARIABLES+++++++++++++++++++++++++++++++++++++++++
+       
+        //PUBLIC INSTANCE VARIABLES+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         /**
          * <summary>
@@ -59,7 +43,41 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
             }//close set
         }//close public Name
 
-        //property for Test
+
+        //Set Property for UnitTest+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        /**
+         * <summary>
+         * This is a propety for our _strength field For UnitTest
+         * </summary>
+         * @property{int} Strength
+         */
+        public int Strength
+        {
+            get { return _strength; }
+            set { _strength = value; }
+        }
+        /**
+        * <summary>
+        * This is a propety for our _speed field For UnitTest
+        * </summary>
+        * @property{int} Speed
+        */
+        public int Speed
+        {
+            get { return _speed; }
+            set { _speed = value; }
+        }
+        /**
+        * <summary>
+        * This is a propety for our _health field For UnitTest
+        * </summary>
+        * @property{int} Health
+        */
+        public int Health
+        {
+            get { return _health; }
+            set { _health = value; }
+        }
 
 
 
@@ -152,11 +170,10 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
      */
         public void Fight()
         {
-            //_hitAttempt();
+           
             if (_hitAttempt() == true)
             {
-                //_hitDamage();
-
+               
                 Console.WriteLine("!!{0} damaged {1}!!", this._name, _hitDamage());
             }
 
@@ -231,9 +248,9 @@ namespace COMP123_S2016_Ckawakam_300821245_Assignment1
     */
         public string FightTest()
         {
-
-            return string.Format("!!{0} damaged {1}!!", this._name, _hitDamage());
-
+           
+                return string.Format("!!{0} damaged {1}!!", this._name, _hitDamage());
+            
         }
         
         

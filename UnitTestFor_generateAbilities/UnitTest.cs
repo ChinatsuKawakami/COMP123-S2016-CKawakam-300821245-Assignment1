@@ -5,7 +5,7 @@ using COMP123_S2016_Ckawakam_300821245_Assignment1;
 namespace UnitTestFor_generateAbilities
 {
     [TestClass]
-    public class UnitTest1 // : Hero
+    public class UnitTest
     {
 
         [TestMethod]
@@ -106,9 +106,10 @@ namespace UnitTestFor_generateAbilities
              string str = string.Format("!!{0} damaged {1}!!", hero4.Name,hero4.HitDamageTest());// _hitDamageTest method includes _hitDamage() metod
              string expectedFail = string.Format("!!{0} get damaged {1}!!", hero4.Name, hero4.HitDamageTest());
             //Assert
-            Assert.AreEqual(str, hero4.FightTest()); //pass!  
-        // Assert.AreEqual(expectedFail,hero4.FightTest()); //Failed
-
+             Assert.AreEqual(str, hero4.FightTest()); //pass!  
+             //Assert.AreEqual(expectedFail,hero4.FightTest()); //Failed
+             
+     
         }//closeFightTestMethod()
         
         [TestMethod]

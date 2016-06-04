@@ -7,11 +7,11 @@ using System.Threading.Tasks;
  *This is driver class
  *Author: Chinatsu Kawakami
  *Date :May 28 th 2016
- *Date Modified: June 2nd 2016
+ *Date Modified: June 3nd 2016
  *Student Id: 300821245
  *Description: This program calls instance variables from Hero class
  *and print Fight and Show method.
- *version : 0.0.12- added UnitTest for checking _hitAttempt method
+ *version : 0.0.13- updated UnitTest 
  *and added HitAttemptTest(int getAttack) int Hero class for _hitAttempt method
  */
 
